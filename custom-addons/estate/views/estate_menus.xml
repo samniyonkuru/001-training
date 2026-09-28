@@ -1,0 +1,24 @@
+<odoo>
+
+    <record id="estate_menu_root" model="ir.ui.menu">
+        <field name="name">Real Estate</field>
+        <field name="sequence">10</field>
+        <field name="action" eval="False"/>
+    </record>
+
+    <record id="estate_menu_properties" model="ir.ui.menu">
+        <field name="name">Properties</field>
+        <field name="parent_id" ref="estate_menu_root"/>
+        <field name="sequence">10</field>
+        <field name="action" eval="False"/>
+    </record>
+
+    <menuitem
+        id="estate_menu_properties_list"
+        name="Properties"
+        parent="estate_menu_properties"
+        action="estate_property_action"
+        sequence="10"
+    />
+
+</odoo>
